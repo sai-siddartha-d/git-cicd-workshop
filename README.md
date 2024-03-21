@@ -1,1 +1,1 @@
-# git-cicd-workshop
+# git-workshop
