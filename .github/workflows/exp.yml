@@ -7,7 +7,7 @@ jobs:
     testin_job:
         - name: install flake8
           runs-on: "ubuntu-latest"
-        steps:
+          steps:
             run: apt install -y flake8
             run: flake8 simple_function.py
             run: python simple_function.py
