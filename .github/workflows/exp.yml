@@ -8,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: runinng
-          run: python simple_functions.py
+          run: python git-cicd-workshop/simple_functions.py
         - name: run script
-          run: python script.py
+          run: python git-cicd-workshop/script.py
 
