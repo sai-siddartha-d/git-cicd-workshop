@@ -1,0 +1,14 @@
+name: Example testing
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: runinng
+          run: python git-cicd-workshop/simple_functions.py
+        - name: run script
+          run: python git-cicd-workshop/script.py
+
