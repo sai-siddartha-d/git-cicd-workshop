@@ -8,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: runinng
-          run: python simple_function.py
+          run: python simple_functions.py
         - name: run script
           run: python script.py
 
