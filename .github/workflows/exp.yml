@@ -5,7 +5,7 @@ on:
             - example
             - main
 jobs:
-    testing job:
+    testing-job:
         - name: install flake8
         - runs-on: "ubuntu-latest"
         - run: apt install -y flake8
