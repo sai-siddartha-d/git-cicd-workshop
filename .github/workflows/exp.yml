@@ -8,8 +8,6 @@ jobs:
             - name: install flake8
               runs-on: ubuntu-latest
               steps:
-                - name: Git checkout
-                  uses:action/checkout@v4
                 - name: Install
                   run: apt install -y flake8
                 - name: flake8
