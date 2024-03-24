@@ -2,7 +2,7 @@ name: Example testing
 on:
     push:
         branches:
-            - example
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest
