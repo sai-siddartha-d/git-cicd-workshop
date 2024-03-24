@@ -5,11 +5,17 @@ on:
             - example
 jobs:
     testin_job:
-        - name: install flake8
-          runs-on: ubuntu-latest
-          steps:
-                run: apt install -y flake8
-                run: flake8 simple_function.py
-                run: python simple_function.py
-                run: python script.py
+            - name: install flake8
+              runs-on: ubuntu-latest
+              steps:
+                - name: Git checkout
+                  uses:action/checkout@v4
+                - name: Install
+                  run: apt install -y flake8
+                - name: flake8
+                  run: flake8 simple_function.py
+                - name: runinng
+                  run: python simple_function.py
+                - name: run script
+                  run: python script.py
 
