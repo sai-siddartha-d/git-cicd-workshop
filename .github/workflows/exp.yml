@@ -4,16 +4,15 @@ on:
         branches:
             - example
 jobs:
-    testin_job:
-            - name: install flake8
-              runs-on: ubuntu-latest
-              steps:
-                - name: Install
-                  run: apt install -y flake8
-                - name: flake8
-                  run: flake8 simple_function.py
-                - name: runinng
-                  run: python simple_function.py
-                - name: run script
-                  run: python script.py
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Install
+          run: apt install -y flake8
+        - name: flake8
+          run: flake8 simple_function.py
+        - name: runinng
+          run: python simple_function.py
+        - name: run script
+          run: python script.py
 
