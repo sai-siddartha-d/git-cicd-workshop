@@ -3,9 +3,8 @@ on:
     push:
         branches:
             - example
-            - main
 jobs:
-    testing-job:
+    testin_job:
         - name: install flake8
           runs-on: "ubuntu-latest"
         steps:
