@@ -1,0 +1,31 @@
+name: Python Package
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash -el {0}
+         steps:
+             - name: Checkout Repo
+               uses: actions/checkout@v4
+             - name: Setup Miniconda
+               uses: conda-incubator/setup-miniconda@v3
+               with:
+                 activate-environment: mle-dev
+                 environment-file: env.yml
+                 auto-activate-base: false
+             - run: |
+                    apt install tree
+             - name: before
+               run: tree
+             - name:        python -m build
+                    tree
+             - uses: action/upload-artifact@v4
+               with:
+                  name: art1
+                  path: dist/test-pack-0.0.1.tar.gz
+
