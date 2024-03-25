@@ -1,0 +1,29 @@
+name: CI-Setup
+on:
+    push:
+        branches:
+            - fix/8/cicd
+    pull_request:
+        branches:
+            - main
+jobs:
+    CI-setup-job:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+               shell: bash -el {0}
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+            - name: Setup Miniconda
+              uses: conda-incubator/setup-miniconda@v3
+              with:
+                activate-environment: mle-dev
+                environment-file: env.yml
+                auto-activate-base: false
+            - name: Activate mle-dev
+              run: conda activate mle-dev
+            - name: Run Flake8
+              run: flake8 nonstandardcode.py
+            - name: Run nonstandardcode.py
+              run: python nonstandardcode.py
