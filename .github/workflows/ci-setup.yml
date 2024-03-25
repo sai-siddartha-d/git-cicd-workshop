@@ -3,6 +3,7 @@ on:
     push:
         branches:
             - fix/8/cicd
+            - main
     pull_request:
         branches:
             - main
