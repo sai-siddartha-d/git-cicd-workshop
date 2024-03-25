@@ -19,7 +19,7 @@ jobs:
                  environment-file: env.yml
                  auto-activate-base: false
              - run: |
-                    apt install tree
+                    sudo apt install tree
              - name: before
                run: tree
              - name: Build package
