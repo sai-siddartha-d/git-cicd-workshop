@@ -20,6 +20,8 @@ jobs:
                  auto-activate-base: false
              - run: |
                     sudo apt install tree
+                    pip install --upgrade setuptools
+                    pip install --upgrade build
              - name: before
                run: tree
              - name: Build package
