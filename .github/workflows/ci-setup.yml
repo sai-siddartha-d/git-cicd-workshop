@@ -25,6 +25,6 @@ jobs:
             - name: Activate mle-dev
               run: conda activate mle-dev
             - name: Run Flake8
-              run: flake8 nonstandardcode.py
+              run: flake8 src/test-pack/nonstandardcode.py
             - name: Run nonstandardcode.py
-              run: python nonstandardcode.py
+              run: python src/test-pack/nonstandardcode.py
